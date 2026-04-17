@@ -6,6 +6,7 @@
 Summary:	A generic, spec-compliant, thorough implementation of the OAuth request-signing logic
 Summary(pl.UTF-8):	Ogólna, zgodna ze specyfikacją, pełna implementacja logiki podpisywania żądań OAuth
 Name:		python-%{module}
+# keep 3.1.0 here for python2 support
 Version:	3.1.0
 Release:	9
 License:	BSD
@@ -51,9 +52,7 @@ uzyskać obsługę OAuth niskim kosztem.
 %py_build
 
 %if %{with tests}
-# use explicit plugins list for reliable builds (delete PYTEST_PLUGINS if empty)
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
-PYTEST_PLUGINS= \
 %{__python} -m pytest tests
 %endif
 
