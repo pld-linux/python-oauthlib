@@ -22,8 +22,8 @@ BuildRequires:	python-setuptools
 BuildRequires:	python-blinker
 BuildRequires:	python-cryptography
 BuildRequires:	python-mock
-BuildRequires:	python-nose
 BuildRequires:	python-pyjwt >= 1.0.0
+BuildRequires:	python-pytest
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
